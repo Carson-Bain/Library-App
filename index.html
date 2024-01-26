@@ -15,21 +15,38 @@
 
     <dialog id="modal">
         <form action="">
-            <label for="title">Book Title:</label>
-            <input type="text" id="title" placeholder=" Title">
-            <label for="author">Author:</label>
-            <input type="text" id="author" placeholder=" Author">
-            <label for="page-count">Page Count:</label>
-            <input type="number" id="page-count" placeholder=" Page Count">
-            <label for="read">Have you read it yet?</label>
-            <input type="checkbox" name="read" id="read">
-            <button class="button" id="cancel" formmethod="dialog">Cancel</button>
-            <button type="submit" class="button" id="submit">Submit</button>
+            <div>
+                <label for="title">Book Title:</label>
+                <input type="text" id="title" placeholder=" Title">
+            </div>
+            <div>
+                <label for="author">Author:</label>
+                <input type="text" id="author" placeholder=" Author">
+            </div>
+            <div>
+                <label for="page-count">Page Count:</label>
+                <input type="number" id="page-count" placeholder=" Page Count">
+            </div>
+            <div>
+                <label for="read">Have you read it yet?</label>
+                <input type="checkbox" name="read" id="read">
+            </div>
+            <div>
+                <button class="button" id="cancel" formmethod="dialog">Cancel</button>
+                <button type="submit" class="button" id="submit">Submit</button>
+            </div>
         </form>
     </dialog>
 
     <div class="card-container">
-        
+        <div class="card">
+            <div class="book-title">Title: PeepPee PooPoo</div>
+            <div class="author">Author: Carson Bain</div>
+            <div class="pages"> Page Count: 677</div>
+            <button id="read-button" class="has-read">Read</button>
+        </div>
+        <div class="card"></div>
+        <div class="card"></div>
     </div>
 </body>
 </html>

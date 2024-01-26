@@ -7,6 +7,10 @@
 
 body{
     background-color: #1f2937;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 200px repeat(3, 1fr)
 }
 
 .header{
@@ -16,6 +20,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    grid-column: 1/4;
+    grid-row: 1/2;
 }
 
 .header h1{
@@ -52,15 +58,75 @@ dialog{
     top: 175px;
 }
 
-#modal::backdrop{
+dialog::backdrop{
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(3px);
 }
 
-/* form{
+form{
+    height: 100%;
     display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 10px;
-} */
+    justify-items: center;
+    align-items: center;
+}
 
-/* make each form element its own child */
+form div{
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+form div:nth-child(5) {
+    border-bottom: none;
+    padding-bottom: none;
+}
+
+
+.card-container{
+    margin-top: 20px;
+    grid-column: 2/3;
+    grid-row: 2/5;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.card{
+    background-color: white;
+    height: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    font-size: 24px;
+}
+
+
+.has-read{
+    background-color: #9fff9c;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    cursor: pointer;
+    font-size: 100%;
+    height: 44px;
+    margin: 12px 0 0;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.not-read{
+    background-color: #ff9c9c;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    cursor: pointer;
+    font-size: 100%;
+    height: 44px;
+    margin: 12px 0 0;
+    padding: 0 25px;
+    text-align: center;
+}
