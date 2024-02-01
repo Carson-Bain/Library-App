@@ -3,7 +3,6 @@ const addBookBtn = document.querySelector('#add-book');
 const modal = document.querySelector('#modal');
 const cancelBtn = document.querySelector('#cancel')
 const submitBtn = document.querySelector('#submit');
-const readBtn = document.createElement('button');
 const deleteBtn = document.createElement('button');
 
 // ELEMENTS
@@ -23,11 +22,6 @@ addBookBtn.addEventListener('click', () => {
 cancelBtn.addEventListener('click', () => {
     modal.close();
 })
-
-// readBtn.addEventListener('click', () => {
-//     console.log('error');
-//     readBtn.classList.toggle('not-read');  
-// })
 
 const myLibrary = [];
 
@@ -65,6 +59,7 @@ function renderCard() {
         const pagesDiv = document.createElement('div');
         pagesDiv.textContent = `Pages: ${book.pages}`
         cardDiv.appendChild(pagesDiv);
+        // have to change to a select element
         const readBtn = document.createElement('button');
         const deleteBtn = document.createElement('button');
         readBtn.classList.add('has-read');
@@ -73,11 +68,6 @@ function renderCard() {
         deleteBtn.classList.add('delete');
         deleteBtn.textContent = 'Delete';
         cardDiv.appendChild(deleteBtn);
-        
-        readBtn.addEventListener('click', () => {
-            console.log('error');
-            readBtn.classList.toggle('not-read');  
-        })
         
         deleteBtn.addEventListener('click', () => {
             myLibrary.splice([i], 1);
